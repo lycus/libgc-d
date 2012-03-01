@@ -18,3 +18,9 @@ You build libgc-d by using Waf:
 
 You can of course adjust the parameters to configure
 as needed.
+
+Limitations
+-----------
+
+* The pointer checking functions are not bound.
+* There's no support for thread creation wrapping.
