@@ -24,5 +24,5 @@ Limitations
 
 * The pointer checking functions are not bound.
 * There's no support for thread creation wrapping.
-* The typed GC API is not bound.
+* The GCJ API is not bound.
 * Thread-local GC is not bound.

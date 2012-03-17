@@ -2,20 +2,12 @@ module gc;
 
 import core.stdc.config;
 
-version (IA64)
+struct GC_stack_base
 {
-    struct GC_stack_base
-    {
-        void* mem_base;
+    version (IA64)
         void* reg_base;
-    }
-}
-else
-{
-    struct GC_stack_base
-    {
-        void* mem_base;
-    }
+
+    void* mem_base;
 }
 
 enum GC_TIME_UNLIMITED = 999999;
@@ -182,4 +174,16 @@ extern (C)
     int GC_get_stack_base(GC_stack_base* sb);
 
     void GC_dump();
+
+    size_t GC_make_descriptor(size_t*, size_t len);
+
+    void* GC_malloc_explicitly_typed(size_t size_in_bytes,
+                                     size_t d);
+
+    void* GC_malloc_explicitly_typed_ignore_off_page(size_t size_in_bytes,
+                                                     size_t d);
+
+    void* GC_calloc_explicitly_typed(size_t nelements,
+                                     size_t element_size_in_bytes,
+                                     size_t d);
 }
