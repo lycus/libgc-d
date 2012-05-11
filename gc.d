@@ -26,7 +26,7 @@ extern (C)
     alias void function() gc_finalizer_callback_fun;
     alias int function() gc_stop_func_fun;
     alias void function(void*, void*) gc_finalization_proc_fun;
-    alias void function(char*, size_t arg) gc_warn_proc_fun;
+    alias void function(char*, size_t) gc_warn_proc_fun;
     alias void* function(void*) gc_fn_type_fun;
     alias void* function(GC_stack_base*, void*) gc_stack_base_func_fun;
 
