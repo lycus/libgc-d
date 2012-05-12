@@ -187,3 +187,13 @@ extern (C)
                                      size_t element_size_in_bytes,
                                      size_t d);
 }
+
+void* hidePointer(void* ptr)
+{
+    return cast(void*)~cast(size_t)ptr;
+}
+
+void* revealPointer(void* ptr)
+{
+    return hidePointer(ptr);
+}
