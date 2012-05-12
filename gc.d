@@ -197,3 +197,7 @@ void* revealPointer(void* ptr)
 {
     return hidePointer(ptr);
 }
+
+void reachableHere(void* ptr)
+{
+}
