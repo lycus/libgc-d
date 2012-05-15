@@ -2,6 +2,8 @@ import gc;
 
 void main()
 {
+    GC_init();
+
     GC_enable_incremental();
 
     for (auto i = 0; i < 1024; i++)
