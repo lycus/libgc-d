@@ -1,3 +1,8 @@
 build/*
 
-*.lock*
+waf
+
+*.lock-*
+*.waf-*
+
+*.orig
