@@ -22,7 +22,11 @@ as needed.
 Limitations
 -----------
 
-* The pointer checking functions are not bound.
+* The binding is written for version 7.1 and below.
 * There's no support for thread creation wrapping.
+* The pointer checking functions are not bound.
+* The pointer backtracking functions are not bound.
 * The GCJ API is not bound.
-* Thread-local GC is not bound.
+* The inline API is not bound.
+* The tiny free lists API is not bound.
+* The marking API is not bound.
