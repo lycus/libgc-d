@@ -81,8 +81,7 @@ def configure(conf):
 
 def build(bld):
     bld.stlib(source = 'gc.d',
-              target = 'gc-d',
-              install_path = '${PREFIX}/lib')
+              target = 'gc-d')
 
 def dist(dst):
     '''makes a tarball for redistributing the sources'''
