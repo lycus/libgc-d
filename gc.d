@@ -198,6 +198,9 @@ void* revealPointer(void* ptr)
     return hidePointer(ptr);
 }
 
+private __gshared void* dummy;
+
 void reachableHere(void* ptr)
 {
+    dummy = ptr;
 }
