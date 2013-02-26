@@ -21,7 +21,7 @@ enum GC_DUPLICATE = 1;
 enum GC_NO_THREADS = 2;
 enum GC_UNIMPLEMENTED = 3;
 
-extern (C)
+extern (C) nothrow
 {
     alias void function() gc_finalizer_callback_fun;
     alias int function() gc_stop_func_fun;
